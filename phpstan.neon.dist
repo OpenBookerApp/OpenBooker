@@ -1,0 +1,11 @@
+parameters:
+  level: 6
+
+  paths:
+    - .
+
+  excludePaths:
+    - ./node_modules
+    - ./vendor
+    - ./storage
+    - ./public
