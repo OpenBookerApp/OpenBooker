@@ -14,7 +14,7 @@ jobs:
 
     name: P${{ matrix.php }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -27,7 +27,14 @@ jobs:
           extensions: mbstring, pdo, pdo_sqlite
           coverage: none
       - name: Install dependencies
-        run: |
-          composer install --prefer-dist --no-interaction
+        run: composer install --prefer-dist --no-interaction --no-progress
+      - name: Copy Environment File
+        run: cp .env.example .env
+      - name: Generate App Key
+        run: php artisan key:generate
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Build NPM Files
+        run: npm run build
       - name: Run PHPStan
         run: ./vendor/bin/phpstan
