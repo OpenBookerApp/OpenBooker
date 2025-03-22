@@ -25,7 +25,7 @@ class Customer extends Model
     ];
 
     protected $with = [
-        'user'
+        'user',
     ];
 
     public function user(): BelongsTo
