@@ -30,6 +30,10 @@ jobs:
         run: composer install --prefer-dist --no-interaction
       - name: Copy Environment File
         run: cp .env.example .env
+      - name: Remove Testing Env File
+        run: rm .env.testing
+      - name: Copy Workflow Testing Env File
+        run: cp .env.workflow .env.testing
       - name: Generate App Key
         run: php artisan key:generate
       - name: Install NPM dependencies
