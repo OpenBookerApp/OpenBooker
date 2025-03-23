@@ -29,6 +29,14 @@
                     >
                         {{ __('Dashboard') }}
                     </flux:navlist.item>
+                    <flux:navlist.item
+                        icon="user-circle"
+                        :href="route('admin.customers')"
+                        :current="request()->routeIs('admin.customers')"
+                        wire:navigate
+                    >
+                        {{ __('Customers') }}
+                    </flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
