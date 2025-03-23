@@ -1,6 +1,8 @@
 <?php
 
+use App\Livewire\Admin\Customers\Create;
 use App\Livewire\Admin\Customers\Index;
+use App\Livewire\Admin\Customers\Show;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -24,7 +26,11 @@ Route::middleware(['auth'])->group(function () {
 
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::name('admin.')->group(function () {
-        Route::get('customers', Index::class)->name('customers');
+        Route::name('customers.')->group(function () {
+            Route::get('customers', Index::class)->name('index');
+            Route::get('customers/create', Create::class)->name('create');
+            Route::get('customers/{customer}', Show::class)->name('show');
+        });
     });
 });
 

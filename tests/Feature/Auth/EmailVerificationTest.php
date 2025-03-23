@@ -22,7 +22,8 @@ it('can send verification email', function () {
     $response = Livewire::test('auth.verify-email')
         ->call('sendVerification');
 
-    $response->assertSee('A new verification link has been sent to the email address you provided during registration.');
+    $response
+        ->assertSee('A new verification link has been sent to the email address you provided during registration.');
 });
 
 it('cannot send verification email if already verified', function () {

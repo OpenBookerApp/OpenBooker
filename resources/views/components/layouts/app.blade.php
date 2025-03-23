@@ -84,7 +84,7 @@
                     <x-mary-menu-item
                         title="Customers"
                         icon="lucide.users"
-                        :link="route('admin.customers')"
+                        :link="route('admin.customers.index')"
                     />
                     <x-mary-menu-sub title="Settings" icon="o-cog-6-tooth">
                         <x-mary-menu-item
