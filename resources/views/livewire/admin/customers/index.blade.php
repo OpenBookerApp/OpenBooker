@@ -10,8 +10,12 @@
             />
         </x-slot>
         <x-slot:actions>
-        <x-mary-button label="Add" wire:click="addNew()" icon="lucide.plus" />
-        </x-slot:actions>
+            <x-mary-button
+                label="Add"
+                wire:click="addNew()"
+                icon="lucide.plus"
+            />
+        </x-slot>
     </x-mary-header>
 
     <!-- TABLE  -->
