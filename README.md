@@ -1,3 +1,5 @@
+[![All Contributors](https://img.shields.io/github/all-contributors/OpenBookerApp/OpenBooker?color=ee8449&style=flat-square)](#contributors)
+
 # OpenBooker
  
 **Open-source web-based appointment booking system built with Laravel and Livewire.**
@@ -54,6 +56,17 @@ php artisan serve
 2. Set up business hours and services.
 3. Allow customers to book appointments.
 4. Receive notifications and manage bookings from the dashboard.
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## 📜 License
 OpenBooker is open-source and licensed under the [MIT License](LICENSE).
