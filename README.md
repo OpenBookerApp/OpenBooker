@@ -55,6 +55,17 @@ php artisan serve
 3. Allow customers to book appointments.
 4. Receive notifications and manage bookings from the dashboard.
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## 📜 License
 OpenBooker is open-source and licensed under the [MIT License](LICENSE).
 
