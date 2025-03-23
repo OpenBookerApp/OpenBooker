@@ -1,4 +1,5 @@
 [![All Contributors](https://img.shields.io/github/all-contributors/OpenBookerApp/OpenBooker?color=ee8449&style=flat-square)](#contributors)
+[![Star on GitHub](https://img.shields.io/github/stars/OpenBookerApp/OpenBooker.svg?style=social)](https://github.com/OpenBookerApp/OpenBooker/stargazers)
 
 # OpenBooker
  
