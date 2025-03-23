@@ -1,3 +1,5 @@
+[![All Contributors](https://img.shields.io/github/all-contributors/OpenBookerApp/OpenBooker?color=ee8449&style=flat-square)](#contributors)
+
 # OpenBooker
  
 **Open-source web-based appointment booking system built with Laravel and Livewire.**
