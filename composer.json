@@ -13,7 +13,9 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.1",
-        "livewire/livewire": "^3.6"
+        "livewire/livewire": "^3.6",
+        "mallardduck/blade-lucide-icons": "^1.23",
+        "robsontenorio/mary": "V2.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

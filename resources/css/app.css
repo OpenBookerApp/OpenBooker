@@ -6,59 +6,51 @@
 @source '../../vendor/livewire/flux-pro/**/*.blade.php';
 @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
 
+/**
+    The lines above are intact.
+    The lines below were added by maryUI installer.
+*/
+
+/** daisyUI */
+@plugin "daisyui" {
+    themes:
+        light --default,
+        dark --prefersdark;
+}
+
+/* maryUI */
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+
+/* Theme toggle */
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-    --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
+/**
+* Paginator - Traditional style
+* Because Laravel defaults does not match well the design of daisyUI.
+*/
 
-    --color-zinc-50: var(--color-gray-50);
-    --color-zinc-100: var(--color-gray-100);
-    --color-zinc-200: var(--color-gray-200);
-    --color-zinc-300: var(--color-gray-300);
-    --color-zinc-400: var(--color-gray-400);
-    --color-zinc-500: var(--color-gray-500);
-    --color-zinc-600: var(--color-gray-600);
-    --color-zinc-700: var(--color-gray-700);
-    --color-zinc-800: var(--color-gray-800);
-    --color-zinc-900: var(--color-gray-900);
-    --color-zinc-950: var(--color-gray-950);
+/*.mary-table-pagination span[aria-current="page"] > span {*/
+/*    @apply bg-primary text-base-100*/
+/*}*/
 
-    --color-accent: var(--color-purple-500);
-    --color-accent-content: var(--color-purple-600);
-    --color-accent-foreground: var(--color-white);
-}
-
-@layer theme {
-    .dark {
-        --color-accent: var(--color-purple-500);
-        --color-accent-content: var(--color-purple-300);
-        --color-accent-foreground: var(--color-white);
+/*.mary-table-pagination button {*/
+/*    @apply cursor-pointer*/
+/*}*/
+.mary-table-pagination {
+    button,
+    span {
+        @apply border-none text-xs;
     }
-}
 
-@layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
+    button {
+        @apply cursor-pointer;
     }
-}
 
-[data-flux-field] {
-    @apply grid gap-2;
-}
+    span[aria-current='page'] > span {
+        @apply bg-base-content/5;
+    }
 
-[data-flux-label] {
-    @apply !mb-0 !leading-tight;
-}
-
-input:focus[data-flux-control],
-textarea:focus[data-flux-control],
-select:focus[data-flux-control] {
-    @apply ring-accent ring-2 outline-hidden;
+    /*button, span[aria-current="page"] > span, span[aria-disabled="true"] span {*/
+    /*    @apply py-1 px-2*/
+    /*}*/
 }
