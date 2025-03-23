@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<ruleset name="Laravel PHPCS Rules">
+    <description>PHPCS ruleset for OpenBooker app.</description>
+
+    <file>tests</file>
+    <file>app</file>
+
+    <arg value="p"/>
+    <arg value="s"/>
+
+    <rule ref="PSR12">
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>tests</exclude-pattern>
+    </rule>
+</ruleset>

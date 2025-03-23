@@ -9,6 +9,9 @@
                 icon="o-magnifying-glass"
             />
         </x-slot>
+        <x-slot:actions>
+        <x-mary-button label="Add" wire:click="addNew()" icon="lucide.plus" />
+        </x-slot:actions>
     </x-mary-header>
 
     <!-- TABLE  -->
@@ -17,28 +20,10 @@
             :headers="$headers"
             :rows="$customers"
             :sort-by="$sortBy"
-        >
-            @scope('actions', $customer)
-                <x-mary-button
-                    icon="o-trash"
-                    wire:click="delete({{ $customer['id'] }})"
-                    wire:confirm="Are you sure?"
-                    spinner
-                    class="btn-ghost btn-sm text-error"
-                />
-            @endscope
-        </x-mary-table>
+            with-pagination
+            per-page="perPage"
+            :per-page-values="[5, 10, 25, 50, 100]"
+            :link="route('admin.customers.show', ['customer' => '[id]'])"
+        />
     </x-mary-card>
-    <x-mary-modal wire:model="showModal">
-        <x-slot:title>Confirm Action</x-slot>
-        Are you sure you want to proceed?
-        <x-slot:actions>
-            <x-mary-button type="secondary" wire:click="cancel">
-                Cancel
-            </x-mary-button>
-            <x-mary-button type="primary" wire:click="confirm">
-                Confirm
-            </x-mary-button>
-        </x-slot>
-    </x-mary-modal>
 </div>
