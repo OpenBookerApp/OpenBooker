@@ -82,9 +82,9 @@
                         :link="route('dashboard')"
                     />
                     <x-mary-menu-item
-                        title="Customers"
+                        title="Contacts"
                         icon="lucide.users"
-                        :link="route('admin.customers.index')"
+                        :link="route('app.contacts')"
                     />
                     <x-mary-menu-sub title="Settings" icon="o-cog-6-tooth">
                         <x-mary-menu-item
