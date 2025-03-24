@@ -4,7 +4,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "prettier": "npx prettier --write ."
+        "prettier": "npx prettier --write resources/"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.15",
