@@ -86,6 +86,11 @@
                         icon="lucide.users"
                         :link="route('app.contacts')"
                     />
+                    <x-mary-menu-item
+                        title="Availabilities"
+                        icon="lucide.clock"
+                        :link="route('app.availabilities')"
+                    />
                     <x-mary-menu-sub title="Settings" icon="o-cog-6-tooth">
                         <x-mary-menu-item
                             title="Wifi"
