@@ -7,3 +7,6 @@ parameters:
 
   paths:
     - app/
+
+  tips:
+      treatPhpDocTypesAsCertain: false

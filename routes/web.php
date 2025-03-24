@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\App\Contacts;
+use App\Livewire\App\Services;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -25,6 +26,7 @@ Route::middleware(['auth'])->group(function () {
 Route::prefix('app')->middleware(['auth', 'verified'])->group(function () {
     Route::name('app.')->group(function () {
         Route::get('contacts', Contacts::class)->name('contacts');
+        Route::get('services', Services::class)->name('services');
     });
 });
 
