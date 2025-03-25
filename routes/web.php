@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\App\Appointments;
 use App\Livewire\App\Availabilities;
 use App\Livewire\App\Contacts;
 use App\Livewire\App\Services;
@@ -29,6 +30,7 @@ Route::prefix('app')->middleware(['auth', 'verified'])->group(function () {
         Route::get('contacts', Contacts::class)->name('contacts');
         Route::get('services', Services::class)->name('services');
         Route::get('availabilities', Availabilities::class)->name('availabilities');
+        Route::get('appointments', Appointments::class)->name('appointments');
     });
 });
 

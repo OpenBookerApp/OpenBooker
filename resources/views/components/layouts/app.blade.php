@@ -12,6 +12,8 @@
             rel="stylesheet"
         />
 
+        @stack('scripts')
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
@@ -90,6 +92,11 @@
                         title="Availabilities"
                         icon="lucide.clock"
                         :link="route('app.availabilities')"
+                    />
+                    <x-mary-menu-item
+                        title="Appointments"
+                        icon="lucide.calendar"
+                        :link="route('app.appointments')"
                     />
                     <x-mary-menu-sub title="Settings" icon="o-cog-6-tooth">
                         <x-mary-menu-item
